@@ -1,0 +1,45 @@
+2023-03-16 21:09:53.060 | 2 | INFO | AccionesBBVA | Microsoft.Hosting.Lifetime | Waiting for the host to be disposed. Ensure all 'IHost' instances are wrapped in 'using' blocks.
+2023-03-16 21:10:15.778 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Try to start Server in Version: 1.0.0.0
+2023-03-16 21:10:15.879 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Environment Name: [Development]
+2023-03-16 21:10:15.881 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Informing Listeners about OnStart()
+2023-03-16 21:10:54.979 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Try to start Server in Version: 1.0.0.0
+2023-03-16 21:10:55.066 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Environment Name: [Development]
+2023-03-16 21:10:55.068 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Informing Listeners about OnStart()
+2023-03-16 21:10:58.604 | 1 | INFO | AccionesBBVA | Infra.Data.DataAccessRegistry | ExpirationEnabled [true], ExpirationPollFrecuency [1800]sec, ExpirationTime [3600]sec.
+2023-03-16 21:10:58.611 | 1 | INFO | AccionesBBVA | Infra.Data.Cache.ExpirationPollTimer | Starting expiration pulling... Polling will be execute every [1800] seconds.
+2023-03-16 21:10:58.629 | 2 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Informing Listeners about OnStop()
+2023-03-16 21:11:05.022 | 2 | INFO | AccionesBBVA | Microsoft.Hosting.Lifetime | Waiting for the host to be disposed. Ensure all 'IHost' instances are wrapped in 'using' blocks.
+2023-03-16 21:11:50.952 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Try to start Server in Version: 1.0.0.0
+2023-03-16 21:11:51.029 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Environment Name: [Development]
+2023-03-16 21:11:51.032 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Informing Listeners about OnStart()
+2023-03-16 21:11:53.069 | 1 | INFO | AccionesBBVA | Infra.Data.DataAccessRegistry | ExpirationEnabled [true], ExpirationPollFrecuency [1800]sec, ExpirationTime [3600]sec.
+2023-03-16 21:11:53.078 | 1 | INFO | AccionesBBVA | Infra.Data.Cache.ExpirationPollTimer | Starting expiration pulling... Polling will be execute every [1800] seconds.
+2023-03-16 21:11:53.101 | 2 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Informing Listeners about OnStop()
+2023-03-16 21:11:59.030 | 2 | INFO | AccionesBBVA | Microsoft.Hosting.Lifetime | Waiting for the host to be disposed. Ensure all 'IHost' instances are wrapped in 'using' blocks.
+2023-03-16 21:12:43.887 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Try to start Server in Version: 1.0.0.0
+2023-03-16 21:12:43.995 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Environment Name: [Development]
+2023-03-16 21:12:43.997 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Informing Listeners about OnStart()
+2023-03-16 21:15:59.991 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Try to start Server in Version: 1.0.0.0
+2023-03-16 21:16:00.065 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Environment Name: [Development]
+2023-03-16 21:16:00.069 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Informing Listeners about OnStart()
+2023-03-16 21:16:53.336 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Try to start Server in Version: 1.0.0.0
+2023-03-16 21:16:53.415 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Environment Name: [Development]
+2023-03-16 21:16:53.419 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Informing Listeners about OnStart()
+2023-03-16 21:16:56.452 | 2 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Informing Listeners about OnStop()
+2023-03-16 21:17:02.790 | 2 | INFO | AccionesBBVA | Microsoft.Hosting.Lifetime | Waiting for the host to be disposed. Ensure all 'IHost' instances are wrapped in 'using' blocks.
+2023-03-16 21:18:03.779 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Try to start Server in Version: 1.0.0.0
+2023-03-16 21:18:03.879 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Environment Name: [Development]
+2023-03-16 21:18:03.880 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Informing Listeners about OnStart()
+2023-03-16 21:18:05.935 | 2 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Informing Listeners about OnStop()
+2023-03-16 21:18:37.813 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Try to start Server in Version: 1.0.0.0
+2023-03-16 21:18:37.909 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Environment Name: [Development]
+2023-03-16 21:18:37.913 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Informing Listeners about OnStart()
+2023-03-16 21:20:59.179 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Try to start Server in Version: 1.0.0.0
+2023-03-16 21:20:59.284 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Environment Name: [Development]
+2023-03-16 21:20:59.286 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Informing Listeners about OnStart()
+2023-03-16 23:40:23.568 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Try to start Server in Version: 1.0.0.0
+2023-03-16 23:40:23.659 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Environment Name: [Development]
+2023-03-16 23:40:23.662 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Informing Listeners about OnStart()
+2023-03-16 23:54:35.645 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Try to start Server in Version: 1.0.0.0
+2023-03-16 23:54:35.788 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Environment Name: [Development]
+2023-03-16 23:54:35.791 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Informing Listeners about OnStart()
