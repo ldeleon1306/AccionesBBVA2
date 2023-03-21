@@ -1,6 +1,8 @@
 C:\Git\AccionesBBVA\src\service\bin\Debug\netcoreapp3.1\AccionesBBVA.exe
 C:\Git\AccionesBBVA\src\service\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Git\AccionesBBVA\src\service\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Git\AccionesBBVA\src\service\bin\Debug\netcoreapp3.1\appsettings.Production.json
+C:\Git\AccionesBBVA\src\service\bin\Debug\netcoreapp3.1\appsettings.Testing.json
 C:\Git\AccionesBBVA\src\service\bin\Debug\netcoreapp3.1\AccionesBBVA.deps.json
 C:\Git\AccionesBBVA\src\service\bin\Debug\netcoreapp3.1\AccionesBBVA.runtimeconfig.json
 C:\Git\AccionesBBVA\src\service\bin\Debug\netcoreapp3.1\AccionesBBVA.runtimeconfig.dev.json

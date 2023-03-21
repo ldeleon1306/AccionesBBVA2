@@ -13,6 +13,7 @@ COPY --from=publish /app/publish .
 
 ENTRYPOINT ["dotnet", "AccionesBBVA.dll"]
 
+
 #FROM ghcr.io/architecture-it/net:6.0-sdk as build
 #WORKDIR /app
 #COPY . .

@@ -20,6 +20,9 @@ namespace AccionesBBVA
         private string _smtpServer { get; set; }
         private string _mailTo { get; set; }
         private string _mailFrom { get; set; }
+        private string _tabla { get; set; }
+        Mail m = new Mail();
+        Querys q = new Querys();
 
         public Worker(ILogger<Worker> logger, IConfiguration configuration)
         {
@@ -29,152 +32,85 @@ namespace AccionesBBVA
             _smtpServer = _configuration["MailSmtp:smtp"];
             _mailTo = _configuration["MailSmtp:mailTo"];
             _mailFrom = _configuration["MailSmtp:mailFrom"];
+            _tabla = _configuration["BBVA:tabla"];
         }
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
             while (!stoppingToken.IsCancellationRequested)
             {
+                //////////////////////Intervalo de fechas//////////////////////////////////////////////
+                TimeSpan interval = TimeSpan.FromHours(24);
+                //calculate time to run the first time & delay to set the timer
+                //DateTime.Today gives time of midnight 00.00
+                var nextRunTime = DateTime.Today.AddDays(1).AddHours(9);
+                var curTime = DateTime.Now;
+                var firstInterval = nextRunTime.Subtract(curTime);
+                //////////////////////Filtro de fechas//////////////////////////////////////////////
                 var now = DateTime.Now;
-                var startOfMonth = new DateTime(now.Year, now.Month, 1);
-                var DaysInMonth = DateTime.DaysInMonth(now.Year, now.Month);
-                var lastDay = new DateTime(now.Year, now.Month, DaysInMonth);
+                DateTime FechaRestada = now.AddDays(-7);
+                DateTime FechaDesde = FechaRestada.Date.Add(new TimeSpan(0, 0, 0));
+                DateTime FechaHasta = DateTime.Now.Date.Add(new TimeSpan(0, 0, 0));
+                string dia = DateTime.Now.ToString("dddd");
                 //using (SqlConnection connection = new SqlConnection(@"Data Source=localhost,1401;Initial catalog=SERVERPROD;User ID=sa;Password=test@123;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
                 //using (SqlConnection connection = new SqlConnection(@"Data Source=localhost,1401;Initial catalog=SERVERPROD;User ID=leonidas;Password=leonidas12345678910-;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
                 //using (SqlConnection connection = new SqlConnection(@"Data Source=ITGDESAOCSRV.andreani.com.ar;Initial catalog=AccionesBBVA;Integrated Security=true"))
                 //using (SqlConnection connection = new SqlConnection(@"Data Source=DBSCEFARMATEST;Initial catalog=LPNFD;Integrated Security=true"))
+                Console.WriteLine("nextRunTime: " + nextRunTime);
+                Console.WriteLine("firstInterval: " + firstInterval);
+                Console.WriteLine(dia);
+                if (dia == "Monday")
                 {
-                    //connection.Open();
-                    //SqlDataReader sqlDr = null;
-                    string queryString = "SELECT SUBSTRING(er.Registro,3,21) + SUBSTRING(er.Registro,85,3) + SUBSTRING(er.Registro,94,180)" +
-                        "FROM AccionesBBVA..EntradaRegistros (nolock) ER " +
-                        "where ER.codigoAccion IN (" +
-                        "'003'," +
-                        "'006'," +
-                        "'016'" +
-                        ")" +
-                        "and er.fechaCreacion Between '2020-01-08 00:00:00' and '2022-12-09 00:00:00' " +
-                        "and ER.Respuesta IN (" +
-                        "4" +
-                        ")" +
-                        "and" +
-                        "(" +
-                        "er.observaciones like 'El estado del envio no permite realizar la operación. Envío en estado final. Estado: 6' " +
-                        "OR  er.observaciones like 'El estado del envio no permite realizar la operación. Envío en estado final. Estado: 7' " +
-                        "OR  er.observaciones like 'El estado del envio no permite realizar la operación. Envío en estado final. Estado: 8'" +
-                        "OR  er.observaciones like 'No se pudo hallar el objeto: EntityNumber con identificador: G00000576967660'" +
-                        ") " +
-                        "AND not exists (" +
-                        "select 1 from AccionesBBVA..EntradaRegistros (nolock) ER2 " +
-                        "where " +
-                        "er.NumeroInterno = er2.NumeroInterno " +
-                        "and er2.respuesta <> 4 " +
-                        "and er.codigoAccion = er2.codigoAccion " +
-                        "and er.fechaCreacion < er2.fechaCreacion " +
-                        "and er.id <> er2.id" +
-                        ")";
-
-                    DataTable dt = new DataTable();
-                    int rows_returned;
-                    try
+                    string queryString = q.query(FechaDesde.ToString("yyyy-MM-dd HH:mm:ss"), FechaHasta.ToString("yyyy-MM-dd HH:mm:ss"),_tabla);
+                    Console.WriteLine(queryString);
                     {
-                        using (SqlConnection connection = new SqlConnection(_connectionString))
+                        DataTable dt = new DataTable();
+                        int rows_returned;
+                        try
                         {
-                            SqlCommand command = new SqlCommand(queryString, connection);
-                            //command.Parameters.AddWithValue("@tPatSName", "Your-Parm-Value");
-                            using (SqlDataAdapter sda = new SqlDataAdapter(command))
+                            using (SqlConnection connection = new SqlConnection(_connectionString))
                             {
-                                command.CommandText = queryString;
-                                command.CommandType = CommandType.Text;
-                                connection.Open();
-                                rows_returned = sda.Fill(dt);
-                                connection.Close();
-                            }
-                            if (dt.Rows.Count > 0)
-                            {
-                                foreach (var item in dt.AsEnumerable())
+                                SqlCommand command = new SqlCommand(queryString, connection);
+                                //command.Parameters.AddWithValue("@tPatSName", "Your-Parm-Value");
+                                using (SqlDataAdapter sda = new SqlDataAdapter(command))
                                 {
-                                    Console.WriteLine(item.ItemArray[0]);
+                                    command.CommandText = queryString;
+                                    command.CommandType = CommandType.Text;
+                                    command.CommandTimeout = 0;
+                                    connection.Open();
+                                    rows_returned = sda.Fill(dt);
+                                    connection.Close();
+                                }
+                                if (dt.Rows.Count > 0)
+                                {
+                                    foreach (var item in dt.AsEnumerable())
+                                    {
+                                        Console.WriteLine(item.ItemArray[0]);
+                                    }
+                                }
+                                else
+                                {
+
+
                                 }
                             }
-                            else
-                            {
+                            m.mail(_mailFrom, _mailTo, _smtpServer, dt.AsEnumerable());
+                        
+                        }
+                        catch (Exception ex)
+                        {
 
-
-                            }
+                            throw ex;
                         }
 
-                        //using (SqlCommand cmd = new SqlCommand("sp_AccionesBBVA", connection))
-                        //{
-                        //    cmd.CommandType = CommandType.StoredProcedure;
-                        //    cmd.CommandTimeout = 0;
-
-                        //    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
-                        //    {
-                        //        DataTable dt = new DataTable();
-
-                        //        da.Fill(dt);
-                        //        foreach (var item in dt.AsEnumerable())
-                        //        {
-                        //            Console.WriteLine(item.ItemArray[0]);
-                        //        }
-
-                        //    }
-
-                        //}
-
-                        mail();
-                        _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
-                        await Task.Delay(600000, stoppingToken);
                     }
-                    catch (Exception ex)
-                    {
-
-                        throw ex;
-                    }
-
                 }
+                else
+                {
+                    Console.WriteLine("en el else");
+                }
+                _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
+                await Task.Delay(firstInterval, stoppingToken);
 
-            }
-
-            void mail()
-            {
-                MailMessage mail = new MailMessage();
-                //Console.WriteLine(_mailFrom.ToString());
-                //Console.WriteLine(_mailTo);
-                mail.From = new MailAddress(_mailFrom);
-                mail.To.Add(_mailTo);
-                //var multiple = _mailTo.Split(';');
-                //foreach (var to in multiple)
-                //{
-                //    if (to != string.Empty)
-                //        mail.To.Add(to);
-                //}              
-                //System.Net.Mail.Attachment attachment;
-                //attachment = new System.Net.Mail.Attachment("output.txt");
-                //mail.Attachments.Add(attachment);
-                //if (!String.IsNullOrEmpty(txterror))
-                //{
-                //  attachment = new System.Net.Mail.Attachment(txterror);
-                //  mail.Attachments.Add(attachment);
-                //}
-                string cliente = "lein";
-                string subject = string.Format($"Prueba {cliente} Mail");
-                string bodyMsg = string.Format($"Se procesó un mongo {cliente}");
-                mail.Subject = subject;
-                mail.Body = bodyMsg;
-                mail.IsBodyHtml = true;
-                //Console.WriteLine(bodyMsg);
-                SmtpClient smtp = new SmtpClient(_smtpServer);
-                smtp.EnableSsl = false;
-                smtp.Port = 25;
-                smtp.UseDefaultCredentials = true;
-
-                //string user = "leosendmailoe@gmail.com";
-                //string pass = "ordenexterna";
-                //NetworkCredential userCredential = new NetworkCredential(user, pass);
-
-                //smtp.Credentials = userCredential;           
-                smtp.Send(mail);
             }
         }
     }

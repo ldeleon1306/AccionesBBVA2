@@ -23,9 +23,15 @@
     <None Update="appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="appsettings.Production.yml">
+    <None Update="appsettings.Production.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="appsettings.Testing.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <!--<None Update="appsettings.Production.yml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>-->
     <None Update="appsettings.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

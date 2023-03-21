@@ -1,0 +1,76 @@
+2023-03-20 00:01:24.577 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Try to start Server in Version: 1.0.0.0
+2023-03-20 00:01:24.641 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Environment Name: [Development]
+2023-03-20 00:01:24.643 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Informing Listeners about OnStart()
+2023-03-20 00:02:39.327 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Try to start Server in Version: 1.0.0.0
+2023-03-20 00:02:39.387 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Environment Name: [Development]
+2023-03-20 00:02:39.389 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Informing Listeners about OnStart()
+2023-03-20 00:03:31.874 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Try to start Server in Version: 1.0.0.0
+2023-03-20 00:03:31.926 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Environment Name: [Development]
+2023-03-20 00:03:31.928 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Informing Listeners about OnStart()
+2023-03-20 00:04:01.170 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Try to start Server in Version: 1.0.0.0
+2023-03-20 00:04:01.244 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Environment Name: [Development]
+2023-03-20 00:04:01.247 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Informing Listeners about OnStart()
+2023-03-20 13:40:02.992 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Try to start Server in Version: 1.0.0.0
+2023-03-20 13:40:03.107 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Environment Name: [Development]
+2023-03-20 13:40:03.109 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Informing Listeners about OnStart()
+2023-03-20 13:51:11.086 | 1 | INFO | AccionesBBVA | AccionesBBVA.Worker | Worker running at: "2023-03-20T13:51:11.0765824-03:00"
+2023-03-20 13:51:15.962 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Informing Listeners about OnStart() returned
+2023-03-20 13:56:18.586 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Try to start Server in Version: 1.0.0.0
+2023-03-20 13:56:18.695 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Environment Name: [Development]
+2023-03-20 13:56:18.697 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Informing Listeners about OnStart()
+2023-03-20 13:58:12.265 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Try to start Server in Version: 1.0.0.0
+2023-03-20 13:58:12.374 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Environment Name: [Development]
+2023-03-20 13:58:12.377 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Informing Listeners about OnStart()
+2023-03-20 13:58:33.322 | 1 | INFO | AccionesBBVA | AccionesBBVA.Worker | Worker running at: "2023-03-20T13:58:33.3153118-03:00"
+2023-03-20 13:58:35.711 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Informing Listeners about OnStart() returned
+2023-03-20 14:00:36.581 | 6 | INFO | AccionesBBVA | AccionesBBVA.Worker | Worker running at: "2023-03-20T14:00:36.5798769-03:00"
+2023-03-20 14:02:38.964 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Try to start Server in Version: 1.0.0.0
+2023-03-20 14:02:39.130 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Environment Name: [Development]
+2023-03-20 14:02:39.134 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Informing Listeners about OnStart()
+2023-03-20 14:02:41.395 | 1 | INFO | AccionesBBVA | AccionesBBVA.Worker | Worker running at: "2023-03-20T14:02:41.3846794-03:00"
+2023-03-20 14:02:41.463 | 2 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Informing Listeners about OnStop()
+2023-03-20 14:02:58.434 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Try to start Server in Version: 1.0.0.0
+2023-03-20 14:02:58.603 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Environment Name: [Development]
+2023-03-20 14:02:58.607 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Informing Listeners about OnStart()
+2023-03-20 14:03:42.695 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Try to start Server in Version: 1.0.0.0
+2023-03-20 14:03:42.864 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Environment Name: [Development]
+2023-03-20 14:03:42.867 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Informing Listeners about OnStart()
+2023-03-20 14:03:45.539 | 1 | INFO | AccionesBBVA | AccionesBBVA.Worker | Worker running at: "2023-03-20T14:03:45.5295417-03:00"
+2023-03-20 14:03:45.549 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Informing Listeners about OnStart() returned
+2023-03-20 14:03:56.236 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Try to start Server in Version: 1.0.0.0
+2023-03-20 14:03:56.352 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Environment Name: [Development]
+2023-03-20 14:03:56.354 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Informing Listeners about OnStart()
+2023-03-20 14:04:19.515 | 1 | INFO | AccionesBBVA | AccionesBBVA.Worker | Worker running at: "2023-03-20T14:04:19.5070178-03:00"
+2023-03-20 14:04:21.436 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Informing Listeners about OnStart() returned
+2023-03-20 14:09:24.690 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Try to start Server in Version: 1.0.0.0
+2023-03-20 14:09:24.821 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Environment Name: [Development]
+2023-03-20 14:09:24.824 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Informing Listeners about OnStart()
+2023-03-20 14:09:27.478 | 1 | INFO | AccionesBBVA | AccionesBBVA.Worker | Worker running at: "2023-03-20T14:09:27.4706193-03:00"
+2023-03-20 14:09:27.488 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Informing Listeners about OnStart() returned
+2023-03-20 14:10:36.596 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Try to start Server in Version: 1.0.0.0
+2023-03-20 14:10:36.735 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Environment Name: [Development]
+2023-03-20 14:10:36.738 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Informing Listeners about OnStart()
+2023-03-20 14:10:39.860 | 1 | INFO | AccionesBBVA | AccionesBBVA.Worker | Worker running at: "2023-03-20T14:10:39.8487173-03:00"
+2023-03-20 14:10:39.886 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Informing Listeners about OnStart() returned
+2023-03-20 14:22:42.385 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Try to start Server in Version: 1.0.0.0
+2023-03-20 14:22:42.511 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Environment Name: [Development]
+2023-03-20 14:22:42.514 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Informing Listeners about OnStart()
+2023-03-20 14:58:35.653 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Try to start Server in Version: 1.0.0.0
+2023-03-20 14:58:35.815 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Environment Name: [Development]
+2023-03-20 14:58:35.818 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Informing Listeners about OnStart()
+2023-03-20 14:59:18.199 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Try to start Server in Version: 1.0.0.0
+2023-03-20 14:59:18.312 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Environment Name: [Development]
+2023-03-20 14:59:18.339 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Informing Listeners about OnStart()
+2023-03-20 17:07:10.509 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Try to start Server in Version: 1.0.0.0
+2023-03-20 17:07:10.644 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Environment Name: [Development]
+2023-03-20 17:07:10.646 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Informing Listeners about OnStart()
+2023-03-20 17:23:48.438 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Try to start Server in Version: 1.0.0.0
+2023-03-20 17:23:48.716 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Environment Name: [Development]
+2023-03-20 17:23:48.719 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Informing Listeners about OnStart()
+2023-03-20 17:41:47.211 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Try to start Server in Version: 1.0.0.0
+2023-03-20 17:41:47.325 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Environment Name: [Development]
+2023-03-20 17:41:47.327 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Informing Listeners about OnStart()
+2023-03-20 17:42:06.293 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Try to start Server in Version: 1.0.0.0
+2023-03-20 17:42:06.433 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Environment Name: [Development]
+2023-03-20 17:42:06.436 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Informing Listeners about OnStart()
+2023-03-20 17:57:14.823 | 1 | INFO | AccionesBBVA | Infra.Full.Configuration.ServiceWrapper | Try to start Server in Version: 1.0.0.0
