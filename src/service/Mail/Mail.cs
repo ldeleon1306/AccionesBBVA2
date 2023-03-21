@@ -35,7 +35,7 @@ namespace AccionesBBVA
 
             MailMessage mail = new MailMessage();  
             mail.From = new MailAddress(_mailFrom);
-            mail.To.Add(_mailTo);
+            //mail.To.Add(_mailTo); //para un mail
             var multiple = _mailTo.Split(';');
             foreach (var to in multiple)
             {
