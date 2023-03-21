@@ -37,6 +37,10 @@ namespace AccionesBBVA
 
             return query;
         }
-        
+        //using (SqlConnection connection = new SqlConnection(@"Data Source=localhost,1401;Initial catalog=SERVERPROD;User ID=sa;Password=test@123;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
+        //using (SqlConnection connection = new SqlConnection(@"Data Source=localhost,1401;Initial catalog=SERVERPROD;User ID=leonidas;Password=leonidas12345678910-;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
+        //using (SqlConnection connection = new SqlConnection(@"Data Source=ITGDESAOCSRV.andreani.com.ar;Initial catalog=AccionesBBVA;Integrated Security=true"))
+        //using (SqlConnection connection = new SqlConnection(@"Data Source=DBSCEFARMATEST;Initial catalog=LPNFD;Integrated Security=true"))
+
     }
 }
