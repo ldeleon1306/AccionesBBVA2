@@ -1,4 +1,4 @@
-﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System;
@@ -39,7 +39,6 @@ namespace AccionesBBVA
             while (!stoppingToken.IsCancellationRequested)
             {
                 //////////////////////Intervalo de fechas//////////////////////////////////////////////
-                TimeSpan interval = TimeSpan.FromHours(24);
                 //calculate time to run the first time & delay to set the timer
                 //DateTime.Today gives time of midnight 00.00
                 var nextRunTime = DateTime.Today.AddDays(1).AddHours(9);
@@ -51,10 +50,7 @@ namespace AccionesBBVA
                 DateTime FechaDesde = FechaRestada.Date.Add(new TimeSpan(0, 0, 0));
                 DateTime FechaHasta = DateTime.Now.Date.Add(new TimeSpan(0, 0, 0));
                 string dia = DateTime.Now.ToString("dddd");
-                //using (SqlConnection connection = new SqlConnection(@"Data Source=localhost,1401;Initial catalog=SERVERPROD;User ID=sa;Password=test@123;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
-                //using (SqlConnection connection = new SqlConnection(@"Data Source=localhost,1401;Initial catalog=SERVERPROD;User ID=leonidas;Password=leonidas12345678910-;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
-                //using (SqlConnection connection = new SqlConnection(@"Data Source=ITGDESAOCSRV.andreani.com.ar;Initial catalog=AccionesBBVA;Integrated Security=true"))
-                //using (SqlConnection connection = new SqlConnection(@"Data Source=DBSCEFARMATEST;Initial catalog=LPNFD;Integrated Security=true"))
+               
                 Console.WriteLine("nextRunTime: " + nextRunTime);
                 Console.WriteLine("firstInterval: " + firstInterval);
                 Console.WriteLine(dia);
@@ -87,27 +83,18 @@ namespace AccionesBBVA
                                         Console.WriteLine(item.ItemArray[0]);
                                     }
                                 }
-                                else
-                                {
-
-
-                                }
                             }
                             m.mail(_mailFrom, _mailTo, _smtpServer, dt.AsEnumerable());
                         
                         }
                         catch (Exception ex)
                         {
-
-                            throw ex;
+                            Console.WriteLine(ex.ToString());
+                            _logger.LogInformation(ex.ToString());                            
                         }
 
                     }
-                }
-                else
-                {
-                    Console.WriteLine("en el else");
-                }
+                }              
                 _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
                 await Task.Delay(firstInterval, stoppingToken);
 
