@@ -37,12 +37,12 @@ namespace AccionesBBVA
             //Console.WriteLine(_mailTo);
             mail.From = new MailAddress(_mailFrom);
             mail.To.Add(_mailTo);
-            //var multiple = _mailTo.Split(';');
-            //foreach (var to in multiple)
-            //{
-            //    if (to != string.Empty)
-            //        mail.To.Add(to);
-            //}              
+            var multiple = _mailTo.Split(';');
+            foreach (var to in multiple)
+            {
+                if (to != string.Empty)
+                    mail.To.Add(to);
+            }
             System.Net.Mail.Attachment attachment;
             attachment = new System.Net.Mail.Attachment(myfile);
             mail.Attachments.Add(attachment);
