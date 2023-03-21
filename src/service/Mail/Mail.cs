@@ -32,9 +32,8 @@ namespace AccionesBBVA
                 }
             }
             Console.WriteLine(myfile);
-            MailMessage mail = new MailMessage();
-            //Console.WriteLine(_mailFrom.ToString());
-            //Console.WriteLine(_mailTo);
+
+            MailMessage mail = new MailMessage();  
             mail.From = new MailAddress(_mailFrom);
             mail.To.Add(_mailTo);
             var multiple = _mailTo.Split(';');
@@ -46,27 +45,18 @@ namespace AccionesBBVA
             System.Net.Mail.Attachment attachment;
             attachment = new System.Net.Mail.Attachment(myfile);
             mail.Attachments.Add(attachment);
-            //if (!String.IsNullOrEmpty(txterror))
-            //{
-            //  attachment = new System.Net.Mail.Attachment(txterror);
-            //  mail.Attachments.Add(attachment);
-            //}
-            string cliente = "lein";
-            string subject = string.Format(myfile);
+    
+            string subject = string.Format($"MODIF - ACCIONES - F"+ fecha + ".txt");
             string bodyMsg = string.Format($"Se adjunta reporte a la fecha.");
             mail.Subject = subject;
             mail.Body = bodyMsg;
             mail.IsBodyHtml = true;
-            //Console.WriteLine(bodyMsg);
+
             SmtpClient smtp = new SmtpClient(_smtpServer);
             smtp.EnableSsl = false;
             smtp.Port = 25;
             smtp.UseDefaultCredentials = true;
-            //string user = "leosendmailoe@gmail.com";
-            //string pass = "ordenexterna";
-            //NetworkCredential userCredential = new NetworkCredential(user, pass);
-
-            //smtp.Credentials = userCredential;           
+        
             smtp.Send(mail);
         }
      
