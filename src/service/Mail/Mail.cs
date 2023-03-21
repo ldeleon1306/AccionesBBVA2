@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.IO;
@@ -31,7 +31,7 @@ namespace AccionesBBVA
                     Console.WriteLine(s);
                 }
             }
-
+            Console.WriteLine(myfile);
             MailMessage mail = new MailMessage();
             //Console.WriteLine(_mailFrom.ToString());
             //Console.WriteLine(_mailTo);
@@ -52,8 +52,8 @@ namespace AccionesBBVA
             //  mail.Attachments.Add(attachment);
             //}
             string cliente = "lein";
-            string subject = string.Format($"Prueba {cliente} Mail");
-            string bodyMsg = string.Format($"Se procesó un mongo {cliente}");
+            string subject = string.Format(myfile);
+            string bodyMsg = string.Format($"Se adjunta reporte a la fecha.");
             mail.Subject = subject;
             mail.Body = bodyMsg;
             mail.IsBodyHtml = true;
