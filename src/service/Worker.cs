@@ -54,7 +54,7 @@ namespace AccionesBBVA
                 Console.WriteLine("nextRunTime: " + nextRunTime);
                 Console.WriteLine("firstInterval: " + firstInterval);
                 Console.WriteLine(dia);
-                if (dia == "Thursday")
+                if (dia == "Tuesday")
                 {
                     string queryString = q.query(FechaDesde.ToString("yyyy-MM-dd HH:mm:ss"), FechaHasta.ToString("yyyy-MM-dd HH:mm:ss"),_tabla);
                     Console.WriteLine(queryString);
